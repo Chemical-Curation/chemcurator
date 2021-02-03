@@ -189,6 +189,18 @@ class SubstanceSerializer(CommonInfoSerializer):
             "associated_compound",
         ]
 
+    def validate_associated_compound(self, value):
+        qs = self.Meta.model.objects.filter(associated_compound=value)
+        if value and qs.exists():
+            if (
+                self.instance
+                and self.instance.associated_compound
+                and value.id == self.instance.associated_compound.id
+            ):
+                return value
+            raise ValidationError("Compound ID value violates unique constraint")
+        return value
+
     def validate(self, data):
         fields = (
             ["preferred_name", "display_name", "casrn"]

@@ -483,6 +483,32 @@ def test_substance_patch(client, admin_user, substance_factory):
 
 
 @pytest.mark.django_db
+def test_substance_patch_same_associated_compound(
+    client, admin_user, substance_factory
+):
+    client.force_authenticate(user=admin_user)
+    original_model = substance_factory.create(defined=True).instance
+    resp = client.patch(
+        "/substances/{}".format(original_model.pk),
+        {
+            "data": {
+                "type": "substance",
+                "id": original_model.pk,
+                "relationships": {
+                    "associatedCompound": {
+                        "data": {
+                            "id": original_model.associated_compound.id,
+                            "type": "definedCompound",
+                        }
+                    },
+                },
+            }
+        },
+    )
+    assert resp.status_code == 200
+
+
+@pytest.mark.django_db
 def test_substance_delete(client, admin_user, substance_factory):
     client.force_authenticate(user=admin_user)
     original_model = substance_factory.create().instance

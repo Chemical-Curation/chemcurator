@@ -283,7 +283,7 @@
     updated_at: 2020-08-11 07:19:19.695585
     updated_by: 1
     label: Deprecated QC Levels
-    short_description: 'This is a deprecated QC Level'
+    short_description: "This is a deprecated QC Level"
     long_description: This is a deprecated QC Level.
     deprecated: True
     rank: 11
@@ -567,7 +567,7 @@
     from_substance: DTXSID602000001
     to_substance: DTXSID202000002
     source: source-1
-    relationship_type: area-professor-home
+    relationship_type: monomer
     qc_notes: This goes from substance DTXSID602000001 to substance DTXSID202000002
 - model: substance.substancerelationship
   pk: 2
@@ -579,7 +579,7 @@
     from_substance: DTXSID602000001
     to_substance: DTXSID602000001
     source: source-1
-    relationship_type: area-professor-home
+    relationship_type: monomer
     qc_notes: This goes from substance DTXSID602000001 to substance DTXSID602000001 (self)
 - model: substance.substancerelationship
   pk: 3
@@ -591,7 +591,7 @@
     from_substance: DTXSID502000000
     to_substance: DTXSID602000001
     source: source-1
-    relationship_type: area-professor-home
+    relationship_type: monomer
     qc_notes: This goes from substance DTXSID502000000 to substance DTXSID602000001
 - model: substance.substancetype
   pk: substance-type-1
@@ -1271,33 +1271,28 @@
     synonym_quality: talk-society-hand-4
     synonym_type: area-professor-home
 - model: substance.relationshiptype
-  pk: area-professor-home
+  pk: monomer
   fields:
     created_at: 2020-08-06 17:54:15.435007
     created_by: 1
     updated_at: 2020-08-06 17:54:15.435498
     updated_by: 1
-    label: area professor home
-    short_description:
-      "Serious final new three ago. Nice these voice effort accept
-      new.
-
-      Most wear so agreement yes. Benefit mean eat care develop shake learn. Whole
-      north amount relate here."
+    label: is a monomer of
+    short_description: is a monomer of
     long_description:
       Nature least information east throughout fear performance. Close
       smile possible use. Suggest red kid lead force. Draw beyond green figure site.
     deprecated: false
-    corrolary_label: get it together
-    corrolary_short_description: stop making noise
+    corrolary_label: is a polymer of
+    corrolary_short_description: is a polymer of
 - model: substance.relationshiptype
-  pk: ive-had-it-up-to-here
+  pk: salt-form
   fields:
     created_at: 2020-08-06 18:44:34.278615
     created_by: 1
     updated_at: 2020-08-06 18:44:34.278646
     updated_by: 1
-    label: ive had it up to here
+    label: is a salt form of
     short_description:
       "Serious final new three ago. Nice these voice effort accept
       new.
@@ -1308,16 +1303,16 @@
       Nature least information east throughout fear performance. Close
       smile possible use. Suggest red kid lead force. Draw beyond green figure site.
     deprecated: false
-    corrolary_label: get it together
-    corrolary_short_description: stop making noise
+    corrolary_label: takes the salt form
+    corrolary_short_description: takes the salt form
 - model: substance.relationshiptype
-  pk: home-computer-0
+  pk: component
   fields:
     created_at: 2020-08-11 07:14:07.340771
     created_by: 1
     updated_at: 2020-08-11 07:14:07.340808
     updated_by: 1
-    label: home computer 0
+    label: is a component of
     short_description:
       "Improve professor decade its success bring pull. Easy bill
       can someone born.
@@ -1337,33 +1332,16 @@
       forget shoulder bank expect apply. Early agent paper majority case experience
       enjoy try.
     deprecated: false
-    corrolary_label:
-      Want write budget finish name return. War occur catch run three
-      detail.
-    corrolary_short_description:
-      "Where fight candidate program write doctor. Process
-      bad remain face effort gun morning.
-
-      Go ten although approach. Left director measure. Tend base describe man more
-      according technology artist.
-
-      Mind whom contain explain share.
-
-      Parent line single there receive. Employee walk line two. Too issue fish crime
-      small.
-
-      Everything inside election against until. Career player relate amount area.
-      Really prove fall similar poor.
-
-      Success article worry just. Determine change easy religious go."
+    corrolary_label: has the component
+    corrolary_short_description: has the component
 - model: substance.relationshiptype
-  pk: onto-answer-effect-1
+  pk: transformation-product
   fields:
     created_at: 2020-08-11 07:14:07.354294
     created_by: 1
     updated_at: 2020-08-11 07:14:07.354320
     updated_by: 1
-    label: onto answer effect 1
+    label: is transformed to
     short_description:
       "Gas sing building tell place choose improve. Me generation
       try military state.
@@ -1387,9 +1365,7 @@
       Safe list something common allow film. Light nearly everything clearly affect.
       Join deal level create marriage."
     deprecated: false
-    corrolary_label:
-      This special send thousand. Relationship arrive long cold number
-      whole.
+    corrolary_label: is transformed from
     corrolary_short_description: "City eat popular tree. Fly situation truth.
 
       Cup least keep hit. Yes American weight person everything defense.
@@ -1485,43 +1461,3 @@
 
       Task together myself far free inside. Finish throw laugh. Quickly dog notice
       paper claim."
-- model: substance.relationshiptype
-  pk: than-how-half-stage-4
-  fields:
-    created_at: 2020-08-11 07:14:07.381383
-    created_by: 1
-    updated_at: 2020-08-11 07:14:07.381403
-    updated_by: 1
-    label: than how half stage 4
-    short_description:
-      "Hospital smile tell always its institution reveal. Partner
-      just little message turn middle. Force everyone professor sit probably usually.
-
-      Man could name see four stage. Weight choice piece conference.
-
-      Born anyone most must situation. Age politics his blue team consumer.
-
-      Learn concern political behind peace. Beyond whose foreign short help worker
-      under. Smile result indeed whose affect range."
-    long_description: "Road have second. Up civil ten century television.
-
-      Outside growth necessary newspaper. Board current person better kitchen understand
-      pull."
-    deprecated: false
-    corrolary_label:
-      Win decade series several leave image subject shoulder. According
-      quite ask lead.
-    corrolary_short_description:
-      "What do speak lot. Learn house parent. Nor base
-      my green real admit. Notice dark my design Mr throw adult.
-
-      Start evidence lead tonight serious. Require also page real. Opportunity somebody
-      happen best.
-
-      Pick seven allow. Language day during authority.
-
-      Interesting power national control. Answer blue grow believe rock election choose.
-      Some question country each here quickly.
-
-      Summer article environmental assume middle we drug. Money consumer decision
-      let. Paper space thousand."

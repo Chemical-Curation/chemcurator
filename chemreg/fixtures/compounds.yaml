@@ -1,156 +1,23 @@
 - model: compound.basecompound
-  pk: DTXCID302000003
+  pk: DTXCID102000019
   fields:
     polymorphic_ctype: 7
-    created_at: 2020-06-02 23:38:04.578229
+    created_at: 2020-07-31 22:52:51.711832
     created_by: 1
-    updated_at: 2020-06-02 23:38:04.578250
+    updated_at: 2020-07-31 22:52:51.711865
     updated_by: 1
-    structure: "\n  -INDIGO-06022023382D\n\n  0  0  0  0  0  0  0  0  0  0  0 V3000\n\
-      M  V30 BEGIN CTAB\nM  V30 COUNTS 26 28 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 O\
-      \ 5.535 -11.0776 0.0 0\nM  V30 2 C 4.9086 -9.6708 0.0 0\nM  V30 3 C 3.377 -9.5098\
-      \ 0.0 0\nM  V30 4 C 2.4718 -10.7557 0.0 0\nM  V30 5 C 0.9403 -10.5947 0.0 0\n\
-      M  V30 6 C 0.3139 -9.1879 0.0 0\nM  V30 7 F -1.2177 -9.0269 0.0 0\nM  V30 8\
-      \ C 1.2191 -7.942 0.0 0\nM  V30 9 C 2.7506 -8.1029 0.0 0\nM  V30 10 C 5.8138\
-      \ -8.4249 0.0 0\nM  V30 11 C 7.3453 -8.5859 0.0 0\nM  V30 12 C 8.2505 -7.34\
-      \ 0.0 0\nM  V30 13 N 9.7821 -7.5009 0.0 0\nM  V30 14 C 10.6873 -6.2551 0.0 0\n\
-      M  V30 15 C 12.2188 -6.416 0.0 0\nM  V30 16 C 12.8452 -7.8229 0.0 0\nM  V30\
-      \ 17 O 14.1219 -6.9617 0.0 0\nM  V30 18 C 13.915 -8.9307 0.0 0\nM  V30 19 C\
-      \ 15.4092 -8.5581 0.0 0\nM  V30 20 C 16.479 -9.6659 0.0 0\nM  V30 21 C 16.0545\
-      \ -11.1462 0.0 0\nM  V30 22 C 14.5603 -11.5188 0.0 0\nM  V30 23 C 13.4905 -10.411\
-      \ 0.0 0\nM  V30 24 C 17.1243 -12.254 0.0 0\nM  V30 25 C 11.94 -9.0688 0.0 0\n\
-      M  V30 26 C 10.4085 -8.9078 0.0 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30\
-      \ 1 2 1 2\nM  V30 2 1 2 3\nM  V30 3 2 3 4\nM  V30 4 1 4 5\nM  V30 5 2 5 6\n\
-      M  V30 6 1 6 7\nM  V30 7 1 6 8\nM  V30 8 2 8 9\nM  V30 9 1 3 9\nM  V30 10 1\
-      \ 2 10\nM  V30 11 1 10 11\nM  V30 12 1 11 12\nM  V30 13 1 12 13\nM  V30 14 1\
-      \ 13 14\nM  V30 15 1 14 15\nM  V30 16 1 15 16\nM  V30 17 1 16 17\nM  V30 18\
-      \ 1 16 18\nM  V30 19 2 18 19\nM  V30 20 1 19 20\nM  V30 21 2 20 21\nM  V30 22\
-      \ 1 21 22\nM  V30 23 2 22 23\nM  V30 24 1 18 23\nM  V30 25 1 21 24\nM  V30 26\
-      \ 1 16 25\nM  V30 27 1 25 26\nM  V30 28 1 13 26\nM  V30 END BOND\nM  V30 END\
-      \ CTAB\nM  END\n"
-    replaced_by: null
-    qc_note: ''
-- model: compound.basecompound
-  pk: DTXCID502000009
-  fields:
-    polymorphic_ctype: 9
-    created_at: 2020-06-18 02:41:57.241921
-    created_by: 1
-    updated_at: 2020-06-18 02:41:57.241957
-    updated_by: 1
-    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
-      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
-      /><atom id='a3' elementType='H' /><atom id='a4' elementType='C' /><atom id='a5'
-      elementType='O' /><atom id='a6' elementType='O' /><atom id='a7' elementType='C'
-      /><atom id='a8' elementType='H' /><atom id='a9' elementType='H' /><atom id='a10'
-      elementType='C' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
-      /><atom id='a13' elementType='C' /><atom id='a14' elementType='C' /><atom id='a15'
-      elementType='H' /><atom id='a16' elementType='C' /><atom id='a17' elementType='H'
-      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
-      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
-      /><atom id='a23' elementType='H' /><atom id='a24' elementType='C' /><atom id='a25'
-      elementType='H' /><atom id='a26' elementType='C' /><atom id='a27' elementType='C'
-      /><atom id='a28' elementType='H' /><atom id='a29' elementType='H' /><atom id='a30'
-      elementType='H' /><atom id='a31' elementType='C' /><atom id='a32' elementType='H'
-      /><atom id='a33' elementType='H' /><atom id='a34' elementType='H' /></atomArray><bondArray><bond
-      atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0 a2' order='1' /><bond atomRefs2='a0
-      a3' order='1' /><bond atomRefs2='a0 a4' order='1' /><bond atomRefs2='a4 a5'
-      order='2' /><bond atomRefs2='a4 a6' order='1' /><bond atomRefs2='a6 a7' order='1'
-      /><bond atomRefs2='a7 a8' order='1' /><bond atomRefs2='a7 a9' order='1' /><bond
-      atomRefs2='a7 a10' order='1' /><bond atomRefs2='a10 a11' order='1' /><bond atomRefs2='a10
-      a12' order='1' /><bond atomRefs2='a10 a13' order='1' /><bond atomRefs2='a13
-      a14' order='2' /><bond atomRefs2='a14 a15' order='1' /><bond atomRefs2='a14
-      a16' order='1' /><bond atomRefs2='a16 a17' order='1' /><bond atomRefs2='a16
-      a18' order='1' /><bond atomRefs2='a16 a19' order='1' /><bond atomRefs2='a19
-      a20' order='1' /><bond atomRefs2='a19 a21' order='1' /><bond atomRefs2='a21
-      a22' order='1' /><bond atomRefs2='a21 a23' order='1' /><bond atomRefs2='a21
-      a24' order='1' /><bond atomRefs2='a24 a13' order='1' /><bond atomRefs2='a24
-      a25' order='1' /><bond atomRefs2='a24 a26' order='1' /><bond atomRefs2='a26
-      a19' order='1' /><bond atomRefs2='a26 a27' order='1' /><bond atomRefs2='a27
-      a28' order='1' /><bond atomRefs2='a27 a29' order='1' /><bond atomRefs2='a27
-      a30' order='1' /><bond atomRefs2='a26 a31' order='1' /><bond atomRefs2='a31
-      a32' order='1' /><bond atomRefs2='a31 a33' order='1' /><bond atomRefs2='a31
-      a34' order='1' /></bondArray></molecule></MChemicalStruct></MDocument></cml>
-    replaced_by: null
-    qc_note: ''
-- model: compound.basecompound
-  pk: DTXCID802000010
-  fields:
-    polymorphic_ctype: 9
-    created_at: 2020-07-28 23:17:22.851629
-    created_by: 1
-    updated_at: 2020-07-28 23:17:22.851649
-    updated_by: 1
-    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
-      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
-      /><atom id='a3' elementType='H' /><atom id='a4' elementType='C' /><atom id='a5'
-      elementType='O' /><atom id='a6' elementType='O' /><atom id='a7' elementType='C'
-      /><atom id='a8' elementType='H' /><atom id='a9' elementType='H' /><atom id='a10'
-      elementType='C' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
-      /><atom id='a13' elementType='C' /><atom id='a14' elementType='C' /><atom id='a15'
-      elementType='H' /><atom id='a16' elementType='C' /><atom id='a17' elementType='H'
-      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
-      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
-      /><atom id='a23' elementType='H' /><atom id='a24' elementType='C' /><atom id='a25'
-      elementType='H' /><atom id='a26' elementType='C' /><atom id='a27' elementType='C'
-      /><atom id='a28' elementType='H' /><atom id='a29' elementType='H' /><atom id='a30'
-      elementType='H' /><atom id='a31' elementType='C' /><atom id='a32' elementType='H'
-      /><atom id='a33' elementType='H' /><atom id='a34' elementType='H' /></atomArray><bondArray><bond
-      atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0 a2' order='1' /><bond atomRefs2='a0
-      a3' order='1' /><bond atomRefs2='a0 a4' order='1' /><bond atomRefs2='a4 a5'
-      order='2' /><bond atomRefs2='a4 a6' order='1' /><bond atomRefs2='a6 a7' order='1'
-      /><bond atomRefs2='a7 a8' order='1' /><bond atomRefs2='a7 a9' order='1' /><bond
-      atomRefs2='a7 a10' order='1' /><bond atomRefs2='a10 a11' order='1' /><bond atomRefs2='a10
-      a12' order='1' /><bond atomRefs2='a10 a13' order='1' /><bond atomRefs2='a13
-      a14' order='2' /><bond atomRefs2='a14 a15' order='1' /><bond atomRefs2='a14
-      a16' order='1' /><bond atomRefs2='a16 a17' order='1' /><bond atomRefs2='a16
-      a18' order='1' /><bond atomRefs2='a16 a19' order='1' /><bond atomRefs2='a19
-      a20' order='1' /><bond atomRefs2='a19 a21' order='1' /><bond atomRefs2='a21
-      a22' order='1' /><bond atomRefs2='a21 a23' order='1' /><bond atomRefs2='a21
-      a24' order='1' /><bond atomRefs2='a24 a13' order='1' /><bond atomRefs2='a24
-      a25' order='1' /><bond atomRefs2='a24 a26' order='1' /><bond atomRefs2='a26
-      a19' order='1' /><bond atomRefs2='a26 a27' order='1' /><bond atomRefs2='a27
-      a28' order='1' /><bond atomRefs2='a27 a29' order='1' /><bond atomRefs2='a27
-      a30' order='1' /><bond atomRefs2='a26 a31' order='1' /><bond atomRefs2='a31
-      a32' order='1' /><bond atomRefs2='a31 a33' order='1' /><bond atomRefs2='a31
-      a34' order='1' /></bondArray></molecule></MChemicalStruct></MDocument></cml>
-    replaced_by: null
-    qc_note: ''
-- model: compound.basecompound
-  pk: DTXCID502000011
-  fields:
-    polymorphic_ctype: 9
-    created_at: 2020-07-28 23:17:29.313314
-    created_by: 1
-    updated_at: 2020-07-28 23:17:29.313333
-    updated_by: 1
-    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
-      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
-      /><atom id='a3' elementType='C' /><atom id='a4' elementType='H' /><atom id='a5'
-      elementType='H' /><atom id='a6' elementType='C' /><atom id='a7' elementType='H'
-      /><atom id='a8' elementType='O' /><atom id='a9' elementType='C' /><atom id='a10'
-      elementType='C' /><atom id='a11' elementType='C' /><atom id='a12' elementType='H'
-      /><atom id='a13' elementType='C' /><atom id='a14' elementType='H' /><atom id='a15'
-      elementType='C' /><atom id='a16' elementType='Cl' /><atom id='a17' elementType='C'
-      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
-      elementType='Cl' /><atom id='a21' elementType='O' /><atom id='a22' elementType='C'
-      /><atom id='a23' elementType='H' /><atom id='a24' elementType='H' /><atom id='a25'
-      elementType='C' /><atom id='a26' elementType='H' /><atom id='a27' elementType='H'
-      /></atomArray><bondArray><bond atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0
-      a2' order='1' /><bond atomRefs2='a0 a3' order='1' /><bond atomRefs2='a3 a4'
-      order='1' /><bond atomRefs2='a3 a5' order='1' /><bond atomRefs2='a3 a6' order='1'
-      /><bond atomRefs2='a6 a7' order='1' /><bond atomRefs2='a6 a8' order='1' /><bond
-      atomRefs2='a8 a9' order='1' /><bond atomRefs2='a9 a10' order='1' /><bond atomRefs2='a10
-      a11' order='1' /><bond atomRefs2='a11 a12' order='1' /><bond atomRefs2='a11
-      a13' order='2' /><bond atomRefs2='a13 a14' order='1' /><bond atomRefs2='a13
-      a15' order='1' /><bond atomRefs2='a15 a16' order='1' /><bond atomRefs2='a15
-      a17' order='2' /><bond atomRefs2='a17 a18' order='1' /><bond atomRefs2='a17
-      a19' order='1' /><bond atomRefs2='a19 a10' order='2' /><bond atomRefs2='a19
-      a20' order='1' /><bond atomRefs2='a9 a21' order='2' /><bond atomRefs2='a6 a22'
-      order='1' /><bond atomRefs2='a22 a23' order='1' /><bond atomRefs2='a22 a24'
-      order='1' /><bond atomRefs2='a22 a25' order='1' /><bond atomRefs2='a25 a0' order='1'
-      /><bond atomRefs2='a25 a26' order='1' /><bond atomRefs2='a25 a27' order='1'
-      /></bondArray></molecule></MChemicalStruct></MDocument></cml>
+    structure: "\n  -INDIGO-07312022522D\n\n  0  0  0  0  0  0  0  0  0  0  0 V3000\n\
+      M  V30 BEGIN CTAB\nM  V30 COUNTS 15 15 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 C\
+      \ 0.0 0.0 0.0 0\nM  V30 2 H 0.0 0.0 0.0 0\nM  V30 3 H 0.0 0.0 0.0 0\nM  V30\
+      \ 4 H 0.0 0.0 0.0 0\nM  V30 5 C 0.0 0.0 0.0 0\nM  V30 6 C 0.0 0.0 0.0 0\nM \
+      \ V30 7 H 0.0 0.0 0.0 0\nM  V30 8 C 0.0 0.0 0.0 0\nM  V30 9 C 0.0 0.0 0.0 0\n\
+      M  V30 10 H 0.0 0.0 0.0 0\nM  V30 11 C 0.0 0.0 0.0 0\nM  V30 12 H 0.0 0.0 0.0\
+      \ 0\nM  V30 13 C 0.0 0.0 0.0 0\nM  V30 14 O 0.0 0.0 0.0 0\nM  V30 15 O 0.0 0.0\
+      \ 0.0 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 1 1 2\nM  V30 2 1 1 3\n\
+      M  V30 3 1 1 4\nM  V30 4 1 1 5\nM  V30 5 2 5 6\nM  V30 6 1 6 7\nM  V30 7 1 6\
+      \ 8\nM  V30 8 1 8 9\nM  V30 9 1 9 10\nM  V30 10 2 9 11\nM  V30 11 1 11 12\n\
+      M  V30 12 1 11 13\nM  V30 13 1 13 5\nM  V30 14 2 13 14\nM  V30 15 2 8 15\nM\
+      \  V30 END BOND\nM  V30 END CTAB\nM  END\n"
     replaced_by: null
     qc_note: ''
 - model: compound.basecompound
@@ -190,75 +57,35 @@
     replaced_by: null
     qc_note: ''
 - model: compound.basecompound
-  pk: DTXCID902000013
+  pk: DTXCID302000003
   fields:
-    polymorphic_ctype: 9
-    created_at: 2020-07-28 23:17:41.308357
+    polymorphic_ctype: 7
+    created_at: 2020-06-02 23:38:04.578229
     created_by: 1
-    updated_at: 2020-07-28 23:17:41.308376
+    updated_at: 2020-06-02 23:38:04.578250
     updated_by: 1
-    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
-      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
-      /><atom id='a3' elementType='H' /><atom id='a4' elementType='C' /><atom id='a5'
-      elementType='H' /><atom id='a6' elementType='H' /><atom id='a7' elementType='C'
-      /><atom id='a8' elementType='H' /><atom id='a9' elementType='C' /><atom id='a10'
-      elementType='H' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
-      /><atom id='a13' elementType='N' /><atom id='a14' elementType='H' /><atom id='a15'
-      elementType='C' /><atom id='a16' elementType='C' /><atom id='a17' elementType='C'
-      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
-      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
-      /><atom id='a23' elementType='C' /><atom id='a24' elementType='H' /><atom id='a25'
-      elementType='C' /><atom id='a26' elementType='H' /><atom id='a27' elementType='O'
-      /></atomArray><bondArray><bond atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0
-      a2' order='1' /><bond atomRefs2='a0 a3' order='1' /><bond atomRefs2='a0 a4'
-      order='1' /><bond atomRefs2='a4 a5' order='1' /><bond atomRefs2='a4 a6' order='1'
-      /><bond atomRefs2='a4 a7' order='1' /><bond atomRefs2='a7 a8' order='1' /><bond
-      atomRefs2='a7 a9' order='1' /><bond atomRefs2='a9 a10' order='1' /><bond atomRefs2='a9
-      a11' order='1' /><bond atomRefs2='a9 a12' order='1' /><bond atomRefs2='a7 a13'
-      order='1' /><bond atomRefs2='a13 a14' order='1' /><bond atomRefs2='a13 a15'
-      order='1' /><bond atomRefs2='a15 a16' order='1' /><bond atomRefs2='a16 a17'
-      order='1' /><bond atomRefs2='a17 a18' order='1' /><bond atomRefs2='a17 a19'
-      order='2' /><bond atomRefs2='a19 a20' order='1' /><bond atomRefs2='a19 a21'
-      order='1' /><bond atomRefs2='a21 a22' order='1' /><bond atomRefs2='a21 a23'
-      order='2' /><bond atomRefs2='a23 a24' order='1' /><bond atomRefs2='a23 a25'
-      order='1' /><bond atomRefs2='a25 a16' order='2' /><bond atomRefs2='a25 a26'
-      order='1' /><bond atomRefs2='a15 a27' order='2' /></bondArray></molecule></MChemicalStruct></MDocument></cml>
-    replaced_by: null
-    qc_note: ''
-- model: compound.basecompound
-  pk: DTXCID602000014
-  fields:
-    polymorphic_ctype: 9
-    created_at: 2020-07-28 23:17:46.706218
-    created_by: 1
-    updated_at: 2020-07-28 23:17:46.706238
-    updated_by: 1
-    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
-      elementType='O' /><atom id='a1' elementType='C' /><atom id='a2' elementType='N'
-      /><atom id='a3' elementType='C' /><atom id='a4' elementType='H' /><atom id='a5'
-      elementType='H' /><atom id='a6' elementType='C' /><atom id='a7' elementType='H'
-      /><atom id='a8' elementType='H' /><atom id='a9' elementType='O' /><atom id='a10'
-      elementType='C' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
-      /><atom id='a13' elementType='C' /><atom id='a14' elementType='H' /><atom id='a15'
-      elementType='H' /><atom id='a16' elementType='C' /><atom id='a17' elementType='C'
-      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
-      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
-      /><atom id='a23' elementType='C' /><atom id='a24' elementType='H' /><atom id='a25'
-      elementType='C' /><atom id='a26' elementType='H' /></atomArray><bondArray><bond
-      atomRefs2='a0 a1' order='2' /><bond atomRefs2='a1 a2' order='1' /><bond atomRefs2='a2
-      a3' order='1' /><bond atomRefs2='a3 a4' order='1' /><bond atomRefs2='a3 a5'
-      order='1' /><bond atomRefs2='a3 a6' order='1' /><bond atomRefs2='a6 a7' order='1'
-      /><bond atomRefs2='a6 a8' order='1' /><bond atomRefs2='a6 a9' order='1' /><bond
-      atomRefs2='a9 a10' order='1' /><bond atomRefs2='a10 a11' order='1' /><bond atomRefs2='a10
-      a12' order='1' /><bond atomRefs2='a10 a13' order='1' /><bond atomRefs2='a13
-      a2' order='1' /><bond atomRefs2='a13 a14' order='1' /><bond atomRefs2='a13 a15'
-      order='1' /><bond atomRefs2='a1 a16' order='1' /><bond atomRefs2='a16 a17' order='1'
-      /><bond atomRefs2='a17 a18' order='1' /><bond atomRefs2='a17 a19' order='2'
-      /><bond atomRefs2='a19 a20' order='1' /><bond atomRefs2='a19 a21' order='1'
-      /><bond atomRefs2='a21 a22' order='1' /><bond atomRefs2='a21 a23' order='2'
-      /><bond atomRefs2='a23 a24' order='1' /><bond atomRefs2='a23 a25' order='1'
-      /><bond atomRefs2='a25 a16' order='2' /><bond atomRefs2='a25 a26' order='1'
-      /></bondArray></molecule></MChemicalStruct></MDocument></cml>
+    structure: "\n  -INDIGO-06022023382D\n\n  0  0  0  0  0  0  0  0  0  0  0 V3000\n\
+      M  V30 BEGIN CTAB\nM  V30 COUNTS 26 28 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 O\
+      \ 5.535 -11.0776 0.0 0\nM  V30 2 C 4.9086 -9.6708 0.0 0\nM  V30 3 C 3.377 -9.5098\
+      \ 0.0 0\nM  V30 4 C 2.4718 -10.7557 0.0 0\nM  V30 5 C 0.9403 -10.5947 0.0 0\n\
+      M  V30 6 C 0.3139 -9.1879 0.0 0\nM  V30 7 F -1.2177 -9.0269 0.0 0\nM  V30 8\
+      \ C 1.2191 -7.942 0.0 0\nM  V30 9 C 2.7506 -8.1029 0.0 0\nM  V30 10 C 5.8138\
+      \ -8.4249 0.0 0\nM  V30 11 C 7.3453 -8.5859 0.0 0\nM  V30 12 C 8.2505 -7.34\
+      \ 0.0 0\nM  V30 13 N 9.7821 -7.5009 0.0 0\nM  V30 14 C 10.6873 -6.2551 0.0 0\n\
+      M  V30 15 C 12.2188 -6.416 0.0 0\nM  V30 16 C 12.8452 -7.8229 0.0 0\nM  V30\
+      \ 17 O 14.1219 -6.9617 0.0 0\nM  V30 18 C 13.915 -8.9307 0.0 0\nM  V30 19 C\
+      \ 15.4092 -8.5581 0.0 0\nM  V30 20 C 16.479 -9.6659 0.0 0\nM  V30 21 C 16.0545\
+      \ -11.1462 0.0 0\nM  V30 22 C 14.5603 -11.5188 0.0 0\nM  V30 23 C 13.4905 -10.411\
+      \ 0.0 0\nM  V30 24 C 17.1243 -12.254 0.0 0\nM  V30 25 C 11.94 -9.0688 0.0 0\n\
+      M  V30 26 C 10.4085 -8.9078 0.0 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30\
+      \ 1 2 1 2\nM  V30 2 1 2 3\nM  V30 3 2 3 4\nM  V30 4 1 4 5\nM  V30 5 2 5 6\n\
+      M  V30 6 1 6 7\nM  V30 7 1 6 8\nM  V30 8 2 8 9\nM  V30 9 1 3 9\nM  V30 10 1\
+      \ 2 10\nM  V30 11 1 10 11\nM  V30 12 1 11 12\nM  V30 13 1 12 13\nM  V30 14 1\
+      \ 13 14\nM  V30 15 1 14 15\nM  V30 16 1 15 16\nM  V30 17 1 16 17\nM  V30 18\
+      \ 1 16 18\nM  V30 19 2 18 19\nM  V30 20 1 19 20\nM  V30 21 2 20 21\nM  V30 22\
+      \ 1 21 22\nM  V30 23 2 22 23\nM  V30 24 1 18 23\nM  V30 25 1 21 24\nM  V30 26\
+      \ 1 16 25\nM  V30 27 1 25 26\nM  V30 28 1 13 26\nM  V30 END BOND\nM  V30 END\
+      \ CTAB\nM  END\n"
     replaced_by: null
     qc_note: ''
 - model: compound.basecompound
@@ -337,28 +164,6 @@
     replaced_by: null
     qc_note: ''
 - model: compound.basecompound
-  pk: DTXCID102000019
-  fields:
-    polymorphic_ctype: 7
-    created_at: 2020-07-31 22:52:51.711832
-    created_by: 1
-    updated_at: 2020-07-31 22:52:51.711865
-    updated_by: 1
-    structure: "\n  -INDIGO-07312022522D\n\n  0  0  0  0  0  0  0  0  0  0  0 V3000\n\
-      M  V30 BEGIN CTAB\nM  V30 COUNTS 15 15 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 C\
-      \ 0.0 0.0 0.0 0\nM  V30 2 H 0.0 0.0 0.0 0\nM  V30 3 H 0.0 0.0 0.0 0\nM  V30\
-      \ 4 H 0.0 0.0 0.0 0\nM  V30 5 C 0.0 0.0 0.0 0\nM  V30 6 C 0.0 0.0 0.0 0\nM \
-      \ V30 7 H 0.0 0.0 0.0 0\nM  V30 8 C 0.0 0.0 0.0 0\nM  V30 9 C 0.0 0.0 0.0 0\n\
-      M  V30 10 H 0.0 0.0 0.0 0\nM  V30 11 C 0.0 0.0 0.0 0\nM  V30 12 H 0.0 0.0 0.0\
-      \ 0\nM  V30 13 C 0.0 0.0 0.0 0\nM  V30 14 O 0.0 0.0 0.0 0\nM  V30 15 O 0.0 0.0\
-      \ 0.0 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 1 1 2\nM  V30 2 1 1 3\n\
-      M  V30 3 1 1 4\nM  V30 4 1 1 5\nM  V30 5 2 5 6\nM  V30 6 1 6 7\nM  V30 7 1 6\
-      \ 8\nM  V30 8 1 8 9\nM  V30 9 1 9 10\nM  V30 10 2 9 11\nM  V30 11 1 11 12\n\
-      M  V30 12 1 11 13\nM  V30 13 1 13 5\nM  V30 14 2 13 14\nM  V30 15 2 8 15\nM\
-      \  V30 END BOND\nM  V30 END CTAB\nM  END\n"
-    replaced_by: null
-    qc_note: ''
-- model: compound.basecompound
   pk: DTXCID402000020
   fields:
     polymorphic_ctype: 7
@@ -378,6 +183,86 @@
       \ 8\nM  V30 8 1 8 9\nM  V30 9 1 9 10\nM  V30 10 2 9 11\nM  V30 11 1 11 12\n\
       M  V30 12 1 11 13\nM  V30 13 1 13 5\nM  V30 14 2 13 14\nM  V30 15 2 8 15\nM\
       \  V30 END BOND\nM  V30 END CTAB\nM  END\n"
+    replaced_by: null
+    qc_note: ''
+- model: compound.basecompound
+  pk: DTXCID502000009
+  fields:
+    polymorphic_ctype: 9
+    created_at: 2020-06-18 02:41:57.241921
+    created_by: 1
+    updated_at: 2020-06-18 02:41:57.241957
+    updated_by: 1
+    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
+      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
+      /><atom id='a3' elementType='H' /><atom id='a4' elementType='C' /><atom id='a5'
+      elementType='O' /><atom id='a6' elementType='O' /><atom id='a7' elementType='C'
+      /><atom id='a8' elementType='H' /><atom id='a9' elementType='H' /><atom id='a10'
+      elementType='C' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
+      /><atom id='a13' elementType='C' /><atom id='a14' elementType='C' /><atom id='a15'
+      elementType='H' /><atom id='a16' elementType='C' /><atom id='a17' elementType='H'
+      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
+      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
+      /><atom id='a23' elementType='H' /><atom id='a24' elementType='C' /><atom id='a25'
+      elementType='H' /><atom id='a26' elementType='C' /><atom id='a27' elementType='C'
+      /><atom id='a28' elementType='H' /><atom id='a29' elementType='H' /><atom id='a30'
+      elementType='H' /><atom id='a31' elementType='C' /><atom id='a32' elementType='H'
+      /><atom id='a33' elementType='H' /><atom id='a34' elementType='H' /></atomArray><bondArray><bond
+      atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0 a2' order='1' /><bond atomRefs2='a0
+      a3' order='1' /><bond atomRefs2='a0 a4' order='1' /><bond atomRefs2='a4 a5'
+      order='2' /><bond atomRefs2='a4 a6' order='1' /><bond atomRefs2='a6 a7' order='1'
+      /><bond atomRefs2='a7 a8' order='1' /><bond atomRefs2='a7 a9' order='1' /><bond
+      atomRefs2='a7 a10' order='1' /><bond atomRefs2='a10 a11' order='1' /><bond atomRefs2='a10
+      a12' order='1' /><bond atomRefs2='a10 a13' order='1' /><bond atomRefs2='a13
+      a14' order='2' /><bond atomRefs2='a14 a15' order='1' /><bond atomRefs2='a14
+      a16' order='1' /><bond atomRefs2='a16 a17' order='1' /><bond atomRefs2='a16
+      a18' order='1' /><bond atomRefs2='a16 a19' order='1' /><bond atomRefs2='a19
+      a20' order='1' /><bond atomRefs2='a19 a21' order='1' /><bond atomRefs2='a21
+      a22' order='1' /><bond atomRefs2='a21 a23' order='1' /><bond atomRefs2='a21
+      a24' order='1' /><bond atomRefs2='a24 a13' order='1' /><bond atomRefs2='a24
+      a25' order='1' /><bond atomRefs2='a24 a26' order='1' /><bond atomRefs2='a26
+      a19' order='1' /><bond atomRefs2='a26 a27' order='1' /><bond atomRefs2='a27
+      a28' order='1' /><bond atomRefs2='a27 a29' order='1' /><bond atomRefs2='a27
+      a30' order='1' /><bond atomRefs2='a26 a31' order='1' /><bond atomRefs2='a31
+      a32' order='1' /><bond atomRefs2='a31 a33' order='1' /><bond atomRefs2='a31
+      a34' order='1' /></bondArray></molecule></MChemicalStruct></MDocument></cml>
+    replaced_by: null
+    qc_note: ''
+- model: compound.basecompound
+  pk: DTXCID502000011
+  fields:
+    polymorphic_ctype: 9
+    created_at: 2020-07-28 23:17:29.313314
+    created_by: 1
+    updated_at: 2020-07-28 23:17:29.313333
+    updated_by: 1
+    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
+      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
+      /><atom id='a3' elementType='C' /><atom id='a4' elementType='H' /><atom id='a5'
+      elementType='H' /><atom id='a6' elementType='C' /><atom id='a7' elementType='H'
+      /><atom id='a8' elementType='O' /><atom id='a9' elementType='C' /><atom id='a10'
+      elementType='C' /><atom id='a11' elementType='C' /><atom id='a12' elementType='H'
+      /><atom id='a13' elementType='C' /><atom id='a14' elementType='H' /><atom id='a15'
+      elementType='C' /><atom id='a16' elementType='Cl' /><atom id='a17' elementType='C'
+      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
+      elementType='Cl' /><atom id='a21' elementType='O' /><atom id='a22' elementType='C'
+      /><atom id='a23' elementType='H' /><atom id='a24' elementType='H' /><atom id='a25'
+      elementType='C' /><atom id='a26' elementType='H' /><atom id='a27' elementType='H'
+      /></atomArray><bondArray><bond atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0
+      a2' order='1' /><bond atomRefs2='a0 a3' order='1' /><bond atomRefs2='a3 a4'
+      order='1' /><bond atomRefs2='a3 a5' order='1' /><bond atomRefs2='a3 a6' order='1'
+      /><bond atomRefs2='a6 a7' order='1' /><bond atomRefs2='a6 a8' order='1' /><bond
+      atomRefs2='a8 a9' order='1' /><bond atomRefs2='a9 a10' order='1' /><bond atomRefs2='a10
+      a11' order='1' /><bond atomRefs2='a11 a12' order='1' /><bond atomRefs2='a11
+      a13' order='2' /><bond atomRefs2='a13 a14' order='1' /><bond atomRefs2='a13
+      a15' order='1' /><bond atomRefs2='a15 a16' order='1' /><bond atomRefs2='a15
+      a17' order='2' /><bond atomRefs2='a17 a18' order='1' /><bond atomRefs2='a17
+      a19' order='1' /><bond atomRefs2='a19 a10' order='2' /><bond atomRefs2='a19
+      a20' order='1' /><bond atomRefs2='a9 a21' order='2' /><bond atomRefs2='a6 a22'
+      order='1' /><bond atomRefs2='a22 a23' order='1' /><bond atomRefs2='a22 a24'
+      order='1' /><bond atomRefs2='a22 a25' order='1' /><bond atomRefs2='a25 a0' order='1'
+      /><bond atomRefs2='a25 a26' order='1' /><bond atomRefs2='a25 a27' order='1'
+      /></bondArray></molecule></MChemicalStruct></MDocument></cml>
     replaced_by: null
     qc_note: ''
 - model: compound.basecompound
@@ -402,45 +287,175 @@
     created_by: 1
     updated_at: 2020-08-10 19:48:02.999350
     updated_by: 1
-    structure: <cml xmlns="http://www.chemaxon.com" version="ChemAxon file format v20.9.0, generated by vunknown"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.chemaxon.com
-      http://www.chemaxon.com/marvin/schema/mrvSchema_20_9_0.xsd"><MDocument><MChemicalStruct>
-      <molecule molID="m1"><atomArray><atom id="a1" elementType="C" x2="-0.0675946442652049" y2="5.323429990064803"/>
-      <atom id="a2" elementType="C" x2="-1.4013279669286718" y2="4.5534299962248035"/>
-      <atom id="a3" elementType="C" x2="-1.4013279669286718" y2="3.0132433418796296"/>
-      <atom id="a4" elementType="C" x2="-0.0675946442652049" y2="2.243430014704803"/>
-      <atom id="a5" elementType="C" x2="1.2661386783982618" y2="3.0132433418796296"/>
-      <atom id="a6" elementType="C" x2="1.2661386783982618" y2="4.5534299962248035"/>
-      <atom id="a7" elementType="C" x2="-4.374999999999999" y2="5.291666666666669" mrvPseudo=" "/>
-      <atom id="a8" elementType="C" x2="-4.374999999999999" y2="3.7516666666666687"/>
-      <atom id="a9" elementType="C" x2="-2.834999999999999" y2="3.7516666666666687"/>
-      <atom id="a10" elementType="C" x2="-2.834999999999999" y2="5.291666666666669" mrvPseudo=" "/>
-      <atom id="a11" elementType="C" x2="-2.834999999999999" y2="2.2116666666666687" mrvPseudo=" "/>
-      <atom id="a12" elementType="C" x2="2.23" y2="5.290000000000003" mrvPseudo=" "/>
-      <atom id="a13" elementType="C" x2="2.23" y2="3.750000000000002"/>
-      <atom id="a14" elementType="C" x2="3.77" y2="3.750000000000002"/>
-      <atom id="a15" elementType="C" x2="3.77" y2="5.290000000000003" mrvPseudo=" "/>
-      <atom id="a16" elementType="C" x2="3.77" y2="2.210000000000002" mrvPseudo=" "/>
-      </atomArray><bondArray><bond id="b1" atomRefs2="a1 a2" order="1"/>
-      <bond id="b2" atomRefs2="a1 a6" order="1"/><bond id="b3" atomRefs2="a2 a3" order="1"/>
+    structure: <cml xmlns="http://www.chemaxon.com" version="ChemAxon file format
+      v20.9.0, generated by vunknown" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.chemaxon.com http://www.chemaxon.com/marvin/schema/mrvSchema_20_9_0.xsd"><MDocument><MChemicalStruct>
+      <molecule molID="m1"><atomArray><atom id="a1" elementType="C" x2="-0.0675946442652049"
+      y2="5.323429990064803"/> <atom id="a2" elementType="C" x2="-1.4013279669286718"
+      y2="4.5534299962248035"/> <atom id="a3" elementType="C" x2="-1.4013279669286718"
+      y2="3.0132433418796296"/> <atom id="a4" elementType="C" x2="-0.0675946442652049"
+      y2="2.243430014704803"/> <atom id="a5" elementType="C" x2="1.2661386783982618"
+      y2="3.0132433418796296"/> <atom id="a6" elementType="C" x2="1.2661386783982618"
+      y2="4.5534299962248035"/> <atom id="a7" elementType="C" x2="-4.374999999999999"
+      y2="5.291666666666669" mrvPseudo=" "/> <atom id="a8" elementType="C" x2="-4.374999999999999"
+      y2="3.7516666666666687"/> <atom id="a9" elementType="C" x2="-2.834999999999999"
+      y2="3.7516666666666687"/> <atom id="a10" elementType="C" x2="-2.834999999999999"
+      y2="5.291666666666669" mrvPseudo=" "/> <atom id="a11" elementType="C" x2="-2.834999999999999"
+      y2="2.2116666666666687" mrvPseudo=" "/> <atom id="a12" elementType="C" x2="2.23"
+      y2="5.290000000000003" mrvPseudo=" "/> <atom id="a13" elementType="C" x2="2.23"
+      y2="3.750000000000002"/> <atom id="a14" elementType="C" x2="3.77" y2="3.750000000000002"/>
+      <atom id="a15" elementType="C" x2="3.77" y2="5.290000000000003" mrvPseudo="
+      "/> <atom id="a16" elementType="C" x2="3.77" y2="2.210000000000002" mrvPseudo="
+      "/> </atomArray><bondArray><bond id="b1" atomRefs2="a1 a2" order="1"/> <bond
+      id="b2" atomRefs2="a1 a6" order="1"/><bond id="b3" atomRefs2="a2 a3" order="1"/>
       <bond id="b4" atomRefs2="a3 a4" order="1"/><bond id="b5" atomRefs2="a4 a5" order="1"/>
-      <bond id="b6" atomRefs2="a5 a6" order="1"/><bond id="b7" atomRefs2="a13 a14" order="1"/>
-      <bond id="b8" atomRefs2="a8 a9" order="1"/><bond id="b9" atomRefs2="a7 a8" order="1"/>
-      <bond id="b10" atomRefs2="a9 a10" order="1"/><bond id="b11" atomRefs2="a9 a11" order="1"/>
-      <bond id="b12" atomRefs2="a14 a16" order="1"/><bond id="b13" atomRefs2="a14 a15" order="1"/>
-      <bond id="b14" atomRefs2="a12 a13" order="1"/></bondArray></molecule></MChemicalStruct></MDocument></cml>
+      <bond id="b6" atomRefs2="a5 a6" order="1"/><bond id="b7" atomRefs2="a13 a14"
+      order="1"/> <bond id="b8" atomRefs2="a8 a9" order="1"/><bond id="b9" atomRefs2="a7
+      a8" order="1"/> <bond id="b10" atomRefs2="a9 a10" order="1"/><bond id="b11"
+      atomRefs2="a9 a11" order="1"/> <bond id="b12" atomRefs2="a14 a16" order="1"/><bond
+      id="b13" atomRefs2="a14 a15" order="1"/> <bond id="b14" atomRefs2="a12 a13"
+      order="1"/></bondArray></molecule></MChemicalStruct></MDocument></cml>
     replaced_by: null
     qc_note: ''
+- model: compound.basecompound
+  pk: DTXCID602000014
+  fields:
+    polymorphic_ctype: 9
+    created_at: 2020-07-28 23:17:46.706218
+    created_by: 1
+    updated_at: 2020-07-28 23:17:46.706238
+    updated_by: 1
+    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
+      elementType='O' /><atom id='a1' elementType='C' /><atom id='a2' elementType='N'
+      /><atom id='a3' elementType='C' /><atom id='a4' elementType='H' /><atom id='a5'
+      elementType='H' /><atom id='a6' elementType='C' /><atom id='a7' elementType='H'
+      /><atom id='a8' elementType='H' /><atom id='a9' elementType='O' /><atom id='a10'
+      elementType='C' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
+      /><atom id='a13' elementType='C' /><atom id='a14' elementType='H' /><atom id='a15'
+      elementType='H' /><atom id='a16' elementType='C' /><atom id='a17' elementType='C'
+      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
+      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
+      /><atom id='a23' elementType='C' /><atom id='a24' elementType='H' /><atom id='a25'
+      elementType='C' /><atom id='a26' elementType='H' /></atomArray><bondArray><bond
+      atomRefs2='a0 a1' order='2' /><bond atomRefs2='a1 a2' order='1' /><bond atomRefs2='a2
+      a3' order='1' /><bond atomRefs2='a3 a4' order='1' /><bond atomRefs2='a3 a5'
+      order='1' /><bond atomRefs2='a3 a6' order='1' /><bond atomRefs2='a6 a7' order='1'
+      /><bond atomRefs2='a6 a8' order='1' /><bond atomRefs2='a6 a9' order='1' /><bond
+      atomRefs2='a9 a10' order='1' /><bond atomRefs2='a10 a11' order='1' /><bond atomRefs2='a10
+      a12' order='1' /><bond atomRefs2='a10 a13' order='1' /><bond atomRefs2='a13
+      a2' order='1' /><bond atomRefs2='a13 a14' order='1' /><bond atomRefs2='a13 a15'
+      order='1' /><bond atomRefs2='a1 a16' order='1' /><bond atomRefs2='a16 a17' order='1'
+      /><bond atomRefs2='a17 a18' order='1' /><bond atomRefs2='a17 a19' order='2'
+      /><bond atomRefs2='a19 a20' order='1' /><bond atomRefs2='a19 a21' order='1'
+      /><bond atomRefs2='a21 a22' order='1' /><bond atomRefs2='a21 a23' order='2'
+      /><bond atomRefs2='a23 a24' order='1' /><bond atomRefs2='a23 a25' order='1'
+      /><bond atomRefs2='a25 a16' order='2' /><bond atomRefs2='a25 a26' order='1'
+      /></bondArray></molecule></MChemicalStruct></MDocument></cml>
+    replaced_by: null
+    qc_note: ''
+- model: compound.basecompound
+  pk: DTXCID802000010
+  fields:
+    polymorphic_ctype: 9
+    created_at: 2020-07-28 23:17:22.851629
+    created_by: 1
+    updated_at: 2020-07-28 23:17:22.851649
+    updated_by: 1
+    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
+      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
+      /><atom id='a3' elementType='H' /><atom id='a4' elementType='C' /><atom id='a5'
+      elementType='O' /><atom id='a6' elementType='O' /><atom id='a7' elementType='C'
+      /><atom id='a8' elementType='H' /><atom id='a9' elementType='H' /><atom id='a10'
+      elementType='C' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
+      /><atom id='a13' elementType='C' /><atom id='a14' elementType='C' /><atom id='a15'
+      elementType='H' /><atom id='a16' elementType='C' /><atom id='a17' elementType='H'
+      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
+      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
+      /><atom id='a23' elementType='H' /><atom id='a24' elementType='C' /><atom id='a25'
+      elementType='H' /><atom id='a26' elementType='C' /><atom id='a27' elementType='C'
+      /><atom id='a28' elementType='H' /><atom id='a29' elementType='H' /><atom id='a30'
+      elementType='H' /><atom id='a31' elementType='C' /><atom id='a32' elementType='H'
+      /><atom id='a33' elementType='H' /><atom id='a34' elementType='H' /></atomArray><bondArray><bond
+      atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0 a2' order='1' /><bond atomRefs2='a0
+      a3' order='1' /><bond atomRefs2='a0 a4' order='1' /><bond atomRefs2='a4 a5'
+      order='2' /><bond atomRefs2='a4 a6' order='1' /><bond atomRefs2='a6 a7' order='1'
+      /><bond atomRefs2='a7 a8' order='1' /><bond atomRefs2='a7 a9' order='1' /><bond
+      atomRefs2='a7 a10' order='1' /><bond atomRefs2='a10 a11' order='1' /><bond atomRefs2='a10
+      a12' order='1' /><bond atomRefs2='a10 a13' order='1' /><bond atomRefs2='a13
+      a14' order='2' /><bond atomRefs2='a14 a15' order='1' /><bond atomRefs2='a14
+      a16' order='1' /><bond atomRefs2='a16 a17' order='1' /><bond atomRefs2='a16
+      a18' order='1' /><bond atomRefs2='a16 a19' order='1' /><bond atomRefs2='a19
+      a20' order='1' /><bond atomRefs2='a19 a21' order='1' /><bond atomRefs2='a21
+      a22' order='1' /><bond atomRefs2='a21 a23' order='1' /><bond atomRefs2='a21
+      a24' order='1' /><bond atomRefs2='a24 a13' order='1' /><bond atomRefs2='a24
+      a25' order='1' /><bond atomRefs2='a24 a26' order='1' /><bond atomRefs2='a26
+      a19' order='1' /><bond atomRefs2='a26 a27' order='1' /><bond atomRefs2='a27
+      a28' order='1' /><bond atomRefs2='a27 a29' order='1' /><bond atomRefs2='a27
+      a30' order='1' /><bond atomRefs2='a26 a31' order='1' /><bond atomRefs2='a31
+      a32' order='1' /><bond atomRefs2='a31 a33' order='1' /><bond atomRefs2='a31
+      a34' order='1' /></bondArray></molecule></MChemicalStruct></MDocument></cml>
+    replaced_by: null
+    qc_note: ''
+- model: compound.basecompound
+  pk: DTXCID902000013
+  fields:
+    polymorphic_ctype: 9
+    created_at: 2020-07-28 23:17:41.308357
+    created_by: 1
+    updated_at: 2020-07-28 23:17:41.308376
+    updated_by: 1
+    structure: <cml><MDocument><MChemicalStruct><molecule><atomArray><atom id='a0'
+      elementType='C' /><atom id='a1' elementType='H' /><atom id='a2' elementType='H'
+      /><atom id='a3' elementType='H' /><atom id='a4' elementType='C' /><atom id='a5'
+      elementType='H' /><atom id='a6' elementType='H' /><atom id='a7' elementType='C'
+      /><atom id='a8' elementType='H' /><atom id='a9' elementType='C' /><atom id='a10'
+      elementType='H' /><atom id='a11' elementType='H' /><atom id='a12' elementType='H'
+      /><atom id='a13' elementType='N' /><atom id='a14' elementType='H' /><atom id='a15'
+      elementType='C' /><atom id='a16' elementType='C' /><atom id='a17' elementType='C'
+      /><atom id='a18' elementType='H' /><atom id='a19' elementType='C' /><atom id='a20'
+      elementType='H' /><atom id='a21' elementType='C' /><atom id='a22' elementType='H'
+      /><atom id='a23' elementType='C' /><atom id='a24' elementType='H' /><atom id='a25'
+      elementType='C' /><atom id='a26' elementType='H' /><atom id='a27' elementType='O'
+      /></atomArray><bondArray><bond atomRefs2='a0 a1' order='1' /><bond atomRefs2='a0
+      a2' order='1' /><bond atomRefs2='a0 a3' order='1' /><bond atomRefs2='a0 a4'
+      order='1' /><bond atomRefs2='a4 a5' order='1' /><bond atomRefs2='a4 a6' order='1'
+      /><bond atomRefs2='a4 a7' order='1' /><bond atomRefs2='a7 a8' order='1' /><bond
+      atomRefs2='a7 a9' order='1' /><bond atomRefs2='a9 a10' order='1' /><bond atomRefs2='a9
+      a11' order='1' /><bond atomRefs2='a9 a12' order='1' /><bond atomRefs2='a7 a13'
+      order='1' /><bond atomRefs2='a13 a14' order='1' /><bond atomRefs2='a13 a15'
+      order='1' /><bond atomRefs2='a15 a16' order='1' /><bond atomRefs2='a16 a17'
+      order='1' /><bond atomRefs2='a17 a18' order='1' /><bond atomRefs2='a17 a19'
+      order='2' /><bond atomRefs2='a19 a20' order='1' /><bond atomRefs2='a19 a21'
+      order='1' /><bond atomRefs2='a21 a22' order='1' /><bond atomRefs2='a21 a23'
+      order='2' /><bond atomRefs2='a23 a24' order='1' /><bond atomRefs2='a23 a25'
+      order='1' /><bond atomRefs2='a25 a16' order='2' /><bond atomRefs2='a25 a26'
+      order='1' /><bond atomRefs2='a15 a27' order='2' /></bondArray></molecule></MChemicalStruct></MDocument></cml>
+    replaced_by: null
+    qc_note: ''
+- model: compound.basecompound
+  pk: DTXCID902000556
+  fields:
+    polymorphic_ctype: 7
+    created_at: 2021-01-15 01:28:07.315475
+    created_by: 1
+    updated_at: 2021-01-15 01:28:07.315498
+    updated_by: 1
+    structure: "\n  -INDIGO-01152101282D\n\n  0  0  0  0  0  0  0  0  0  0  0 V3000\n\
+      M  V30 BEGIN CTAB\nM  V30 COUNTS 2 1 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 F 5.7\
+      \ -9.9 0.0 0\nM  V30 2 F 6.7 -9.9 0.0 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\n\
+      M  V30 1 1 1 2\nM  V30 END BOND\nM  V30 END CTAB\nM  END\n"
+    replaced_by: null
+    qc_note: ''
+- model: compound.definedcompound
+  pk: DTXCID102000019
+  fields:
+    inchikey: VTWDKFNVVLAELH-UHFFFAOYSA-N
 - model: compound.definedcompound
   pk: DTXCID302000003
   fields:
     inchikey: AGAHNABIDCTLHW-UHFFFAOYSA-N
 - model: compound.definedcompound
   pk: DTXCID402000018
-  fields:
-    inchikey: VTWDKFNVVLAELH-UHFFFAOYSA-N
-- model: compound.definedcompound
-  pk: DTXCID102000019
   fields:
     inchikey: VTWDKFNVVLAELH-UHFFFAOYSA-N
 - model: compound.definedcompound
@@ -451,38 +466,21 @@
   pk: DTXCID502000024
   fields:
     inchikey: MHAJPDPJQMAIIY-UHFFFAOYSA-N
-- model: compound.illdefinedcompound
-  pk: DTXCID502000009
+- model: compound.definedcompound
+  pk: DTXCID902000556
   fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID802000010
+    inchikey: PXGOKWXKJXAPGV-UHFFFAOYSA-N
+- model: compound.querystructuretype
+  pk: deprecated
   fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID502000011
-  fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID202000012
-  fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID902000013
-  fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID602000014
-  fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID302000015
-  fields:
-    query_structure_type: ill-defined
-- model: compound.illdefinedcompound
-  pk: DTXCID502000555
-  fields:
-    query_structure_type: deprecated
+    created_at: 2020-08-11 07:19:19.695550
+    created_by: 1
+    updated_at: 2020-08-11 07:19:19.695585
+    updated_by: 1
+    label: Deprecated
+    short_description: This is a deprecated QST
+    long_description: This is a deprecated Query Structure Type.
+    deprecated: true
 - model: compound.querystructuretype
   pk: ill-defined
   fields:
@@ -524,14 +522,35 @@
     long_description: Where season section represent anything statement. Friend rise
       half culture none force. Beyond wide mention fire military support drive.
     deprecated: false
-- model: compound.querystructuretype
-  pk: deprecated
+- model: compound.illdefinedcompound
+  pk: DTXCID202000012
   fields:
-    created_at: 2020-08-11 07:19:19.695550
-    created_by: 1
-    updated_at: 2020-08-11 07:19:19.695585
-    updated_by: 1
-    label: Deprecated
-    short_description: 'This is a deprecated QST'
-    long_description: This is a deprecated Query Structure Type.
-    deprecated: True
+    query_structure_type: ill-defined
+- model: compound.illdefinedcompound
+  pk: DTXCID302000015
+  fields:
+    query_structure_type: ill-defined
+- model: compound.illdefinedcompound
+  pk: DTXCID502000009
+  fields:
+    query_structure_type: ill-defined
+- model: compound.illdefinedcompound
+  pk: DTXCID502000011
+  fields:
+    query_structure_type: ill-defined
+- model: compound.illdefinedcompound
+  pk: DTXCID502000555
+  fields:
+    query_structure_type: deprecated
+- model: compound.illdefinedcompound
+  pk: DTXCID602000014
+  fields:
+    query_structure_type: ill-defined
+- model: compound.illdefinedcompound
+  pk: DTXCID802000010
+  fields:
+    query_structure_type: ill-defined
+- model: compound.illdefinedcompound
+  pk: DTXCID902000013
+  fields:
+    query_structure_type: ill-defined
