@@ -2,7 +2,6 @@ from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework.reverse import reverse as drf_reverse
 
-from indigo import IndigoException
 from rest_framework_json_api.utils import format_value
 
 from chemreg.common.serializers import CommonInfoSerializer, ControlledVocabSerializer
@@ -19,6 +18,7 @@ from chemreg.compound.validators import (
     validate_molfile_v3000_computable,
     validate_smiles,
 )
+from chemreg.indigo.errors import catch_compound_calc_error
 from chemreg.indigo.inchi import get_inchikey
 from chemreg.indigo.molfile import get_molfile_v3000
 from chemreg.jsonapi.serializers import PolymorphicModelSerializer
@@ -168,21 +168,19 @@ class DefinedCompoundDetailSerializer(DefinedCompoundSerializer):
             "calculated_inchikey",
         ]
 
+    @catch_compound_calc_error
     def get_molecular_weight(self, obj):
-        try:
-            return obj.indigo_structure.molecularWeight()
-        except IndigoException:
-            pass
+        return obj.indigo_structure.molecularWeight()
 
+    @catch_compound_calc_error
     def get_molecular_formula(self, obj):
-        try:
-            return obj.indigo_structure.grossFormula()
-        except IndigoException:
-            pass
+        return obj.indigo_structure.grossFormula()
 
+    @catch_compound_calc_error
     def get_smiles(self, obj):
         return obj.indigo_structure.smiles()
 
+    @catch_compound_calc_error
     def get_calculated_inchikey(self, obj):
         return get_inchikey(obj.molfile_v3000)
 
