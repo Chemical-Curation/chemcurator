@@ -2,6 +2,7 @@ from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from rest_framework.reverse import reverse as drf_reverse
 
+from indigo import IndigoException
 from rest_framework_json_api.utils import format_value
 
 from chemreg.common.serializers import CommonInfoSerializer, ControlledVocabSerializer
@@ -168,10 +169,16 @@ class DefinedCompoundDetailSerializer(DefinedCompoundSerializer):
         ]
 
     def get_molecular_weight(self, obj):
-        return obj.indigo_structure.molecularWeight()
+        try:
+            return obj.indigo_structure.molecularWeight()
+        except IndigoException:
+            pass
 
     def get_molecular_formula(self, obj):
-        return obj.indigo_structure.grossFormula()
+        try:
+            return obj.indigo_structure.grossFormula()
+        except IndigoException:
+            pass
 
     def get_smiles(self, obj):
         return obj.indigo_structure.smiles()
