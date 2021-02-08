@@ -62,7 +62,7 @@ class BaseCompound(PolymorphicModel, CommonInfo):
 
     id = models.CharField(
         default=build_cid, primary_key=True, max_length=50, unique=True
-    )
+    )  # todo: unique constraint cross model with sid
     structure = models.TextField()
     # soft delete functionality
     replaced_by = models.ForeignKey(
