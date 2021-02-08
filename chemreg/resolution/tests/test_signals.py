@@ -11,6 +11,44 @@ def test_substance_save_signal(substance_factory):
 
 
 @pytest.mark.django_db
+def test_substance_associate_compound(substance_factory, defined_compound_factory):
+    # test to see this deletes the newly unorphaned compound
+    substance = substance_factory().instance
+    compound = defined_compound_factory().instance
+    with patch("requests.delete") as mocked_delete:
+        substance.associated_compound = compound
+        substance.save()
+        mocked_delete.assert_called_once()
+
+
+@pytest.mark.django_db
+def test_substance_disassociate_compound(substance_factory, defined_compound_factory):
+    # test to see this adds an orphaned compound
+    substance = substance_factory(defined=True).instance
+    with patch("requests.post") as mocked_post:
+        substance.associated_compound = None
+        substance.save()
+        mocked_post.assert_called_once()
+
+
+@pytest.mark.django_db
+def test_create_orphaned_compound(defined_compound_factory):
+    # test to see orphaned compound adds a compound
+    with patch("requests.post") as mocked_post:
+        defined_compound_factory()
+        mocked_post.assert_called_once()
+
+
+@pytest.mark.django_db
+def test_delete_orphaned_compound(defined_compound_factory):
+    # test to see orphaned compound deletes compound (soft delete questions)
+    compound = defined_compound_factory().instance
+    with patch("requests.delete") as mocked_post:
+        compound.delete()
+        mocked_post.assert_called_once()
+
+
+@pytest.mark.django_db
 def test_synonym_save_signal(substance_factory, synonym_factory):
     with patch("requests.post") as mocked_post:
         # Create related resources

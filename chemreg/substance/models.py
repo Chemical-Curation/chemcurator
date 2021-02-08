@@ -140,6 +140,11 @@ class Substance(CommonInfo):
         ],
     )
 
+    def __init__(self, *args, **kwargs):
+        super(Substance, self).__init__(*args, **kwargs)
+        # this is needed to determine whether a compound is becoming "orphaned"
+        self.original_compound = self.associated_compound
+
     objects = SubstanceQuerySet.as_manager()
 
 
