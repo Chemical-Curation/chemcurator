@@ -4,11 +4,12 @@ from django.dispatch import receiver
 
 from chemreg.resolution.indices import CompoundIndex, SubstanceIndex
 
-# Todo: Syncs on:
-#   - Substance Associate  compound needs to be dis
-#   - Substance Disassociate
-#   - Orphan Compound Save
-#   - Orphan Compound Delete
+# Todo: Syncs:
+#   Cases:
+#   - Compound saved compound needs to be sent to resolver
+#   - Compound deleted compound needs to be removed from resolver
+#   - Substance saved w/ associated_compound  compound needs to be removed from resolver
+#   - Substance saved w/o associated_compound  if compound existed, compound needs to be sent to resolver
 
 
 @receiver(post_save, sender=apps.get_model("substance.Substance"))
@@ -21,8 +22,10 @@ def substance_index_substance_sync(instance, **kwargs):
     """
 
     # This is incomplete.  This is where i'm planning on handing delete and save requests on orphan compounds
+    if instance.associated_compound:
+        CompoundIndex().delete(instance.associated_compound.pk)
     if instance.original_compound and not instance.associated_compound:
-        CompoundIndex().delete(instance.original_compound.pk)
+        CompoundIndex().sync_instances(instance.original_compound)
 
     # bool determining if this is coming from post_save or post_delete
     delete = kwargs.get("created") is None

@@ -12,23 +12,14 @@ def test_substance_save_signal(substance_factory):
 
 
 @pytest.mark.django_db
-def test_substance_associate_compound(substance_factory, defined_compound_factory):
-    # test to see this deletes the newly unorphaned compound
-    substance = substance_factory.create(defined=True).instance
-    with patch("requests.delete") as mocked_delete:
-        substance.associated_compound = None
-        substance.save()
-        mocked_delete.assert_called_once()
-
-
-@pytest.mark.django_db
 def test_substance_disassociate_compound(substance_factory, defined_compound_factory):
     # test to see this adds an orphaned compound
     substance = substance_factory(defined=True).instance
     with patch("requests.post") as mocked_post:
         substance.associated_compound = None
         substance.save()
-        mocked_post.assert_called_once()
+        # one post for the substance and one for the compound
+        assert mocked_post.call_count == 2
 
 
 @pytest.mark.django_db
