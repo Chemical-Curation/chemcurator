@@ -85,7 +85,7 @@ class Index:
     def delete(self, pk):
         # delete a single row
         try:
-            resp = requests.get(self.search_url + pk, headers=self.HEADERS)
+            resp = requests.delete(f"{self.search_url}/{pk}", headers=self.HEADERS)
             return resp.json()
         except requests.exceptions.ConnectionError:
             raise APIException("The Resolver service is not available right now")

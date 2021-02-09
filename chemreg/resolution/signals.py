@@ -21,8 +21,8 @@ def substance_index_substance_sync(instance, **kwargs):
     """
 
     # This is incomplete.  This is where i'm planning on handing delete and save requests on orphan compounds
-    if instance.original_compound != instance.associated_compound:
-        CompoundIndex().delete(instance.original_compound)
+    if instance.original_compound and not instance.associated_compound:
+        CompoundIndex().delete(instance.original_compound.pk)
 
     # bool determining if this is coming from post_save or post_delete
     delete = kwargs.get("created") is None
