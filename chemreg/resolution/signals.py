@@ -4,13 +4,6 @@ from django.dispatch import receiver
 
 from chemreg.resolution.indices import CompoundIndex, SubstanceIndex
 
-# Todo: Syncs:
-#   Cases:
-#   - Compound saved compound needs to be sent to resolver
-#   - Compound deleted compound needs to be removed from resolver
-#   - Substance saved w/ associated_compound  compound needs to be removed from resolver
-#   - Substance saved w/o associated_compound  if compound existed, compound needs to be sent to resolver
-
 
 @receiver(post_save, sender=apps.get_model("substance.Substance"))
 @receiver(post_delete, sender=apps.get_model("substance.Substance"))
