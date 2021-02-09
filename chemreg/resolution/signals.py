@@ -58,5 +58,11 @@ def substance_index_compound_sync(instance, **kwargs):
 
     # bool determining if this is coming from post_save or post_delete
     delete = kwargs.get("created") is None
+
     if instance:
-        CompoundIndex().sync_instances(instance, delete)
+        # if the compound is paired, update the substance record it's paired to
+        if hasattr(instance, "substance"):
+            SubstanceIndex().sync_instances(instance.substance, delete)
+        # else (the compound is solo) update it's solo record.
+        else:
+            CompoundIndex().sync_instances(instance, delete)
