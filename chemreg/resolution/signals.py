@@ -40,3 +40,20 @@ def substance_index_synonym_sync(instance, **kwargs):
     """
     if instance:
         SubstanceIndex().sync_instances(instance.substance)
+
+
+@receiver(post_save, sender=apps.get_model("compound.DefinedCompound"))
+@receiver(post_delete, sender=apps.get_model("compound.DefinedCompound"))
+@receiver(post_save, sender=apps.get_model("compound.illDefinedCompound"))
+@receiver(post_delete, sender=apps.get_model("compound.illDefinedCompound"))
+def substance_index_compound_sync(instance, **kwargs):
+    """Post save signal to sync resolver app with chemreg's compound
+
+    Args:
+        instance (:obj:`Compound`): Compound being updated, either Defined or IllDefined.
+    """
+
+    # bool determining if this is coming from post_save or post_delete
+    delete = kwargs.get("created") is None
+    if instance:
+        CompoundIndex().sync_instances(instance, delete)

@@ -1,3 +1,4 @@
+import json
 from unittest.mock import patch
 
 import pytest
@@ -31,20 +32,34 @@ def test_substance_disassociate_compound(substance_factory, defined_compound_fac
 
 
 @pytest.mark.django_db
-def test_create_orphaned_compound(defined_compound_factory):
+def test_create_orphaned_defined_compound(defined_compound_factory):
     # test to see orphaned compound adds a compound
     with patch("requests.post") as mocked_post:
-        defined_compound_factory()
+        compound = defined_compound_factory().instance
         mocked_post.assert_called_once()
+        payload = json.loads(mocked_post.call_args.args[1])
+        assert payload["data"]["id"] == compound.pk
+
+
+@pytest.mark.django_db
+def test_create_orphaned_illdefined_compound(ill_defined_compound_factory):
+    # test to see orphaned compound adds a compound
+    with patch("requests.post") as mocked_post:
+        compound = ill_defined_compound_factory().instance
+        mocked_post.assert_called_once()
+        payload = json.loads(mocked_post.call_args.args[1])
+        assert payload["data"]["id"] == compound.pk
 
 
 @pytest.mark.django_db
 def test_delete_orphaned_compound(defined_compound_factory):
     # test to see orphaned compound deletes compound (soft delete questions)
     compound = defined_compound_factory().instance
+    primary_key = compound.pk
     with patch("requests.delete") as mocked_post:
-        compound.delete()
+        compound.delete(force=True)
         mocked_post.assert_called_once()
+        assert primary_key in mocked_post.call_args.args[0]
 
 
 @pytest.mark.django_db
