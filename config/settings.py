@@ -35,6 +35,7 @@ if env.bool("WHITELIST_LOCAL"):
         "0.0.0.0",
         "127.0.0.1",
         "localhost",
+        "testserver",
     ]
 if env("WHITELIST_HOST"):
     ALLOWED_HOSTS += [env("WHITELIST_HOST")]
@@ -198,7 +199,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "chemreg.jsonapi.pagination.JsonApiPageNumberPagination",
     "DEFAULT_PARSER_CLASSES": ["chemreg.jsonapi.parsers.JSONParser"],
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+        # "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ],
     "DEFAULT_RENDERER_CLASSES": ["chemreg.jsonapi.renderers.JSONRenderer"],
     "EXCEPTION_HANDLER": "rest_framework_json_api.exceptions.exception_handler",

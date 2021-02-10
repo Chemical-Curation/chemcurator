@@ -1,4 +1,11 @@
+from collections import namedtuple
+
+from rest_framework import viewsets
+from rest_framework.response import Response
+
 from chemreg.common.mixins import DeprecateDeleteMixin
+from chemreg.compound.models import DefinedCompound
+from chemreg.compound.serializers import DefinedCompoundSerializer
 from chemreg.jsonapi.views import ModelViewSet
 from chemreg.substance.filters import SubstanceFilter, SubstanceRelationshipFilter
 from chemreg.substance.models import (
@@ -12,7 +19,7 @@ from chemreg.substance.models import (
     SynonymQuality,
     SynonymType,
 )
-from chemreg.substance.serializers import (
+from chemreg.substance.serializers import (  # SearchResolutionSerializer,
     QCLevelsTypeSerializer,
     RelationshipTypeSerializer,
     SourceSerializer,
@@ -80,3 +87,30 @@ class SubstanceRelationshipViewSet(ModelViewSet):
     queryset = SubstanceRelationship.objects.all()
     serializer_class = SubstanceRelationshipSerializer
     filterset_class = SubstanceRelationshipFilter
+
+
+ResolverResponse = namedtuple("ResolverResponse", ("substances", "compounds"))
+
+
+class ResolverViewSet(viewsets.ViewSet):
+    """
+    A simple ViewSet for listing the Tweets and Articles in your Timeline.
+    """
+
+    def list(self, request):
+        print("yay")
+        # timeline = ResolverResponse (
+        #     substances=Substance.objects.all(),
+        #     compounds=DefinedCompound.objects.all(),
+        # )
+        # serializer = SearchResolutionSerializer(timeline)
+
+        subs = SubstanceSerializer(
+            Substance.objects.all(), context={"request": request}, many=True
+        )
+        comps = DefinedCompoundSerializer(
+            DefinedCompound.objects.all(), context={"request": request}, many=True
+        )
+
+        # return Response(serializer.data)
+        return Response({"substances": subs.data, "compounds": comps.data})

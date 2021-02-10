@@ -15,6 +15,9 @@ router.register(views.SubstanceTypeViewSet)
 router.register(views.SynonymQualityViewSet, prefix="synonymQualities")
 router.register(views.SubstanceRelationshipViewSet)
 
+resolver_list = views.ResolverViewSet.as_view({"get": "list"})
+
 urlpatterns = [
     path("", include(router.urls)),
+    path("bologna/", resolver_list, name="resolver-list"),
 ]

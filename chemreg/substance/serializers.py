@@ -4,6 +4,8 @@ from django.core.exceptions import ValidationError as DjangoValidationError
 from django.core.validators import RegexValidator
 from rest_framework.exceptions import ValidationError
 
+from rest_framework_json_api import serializers
+
 from chemreg.common.serializers import CommonInfoSerializer, ControlledVocabSerializer
 from chemreg.common.validators import validate_casrn_checksum
 from chemreg.compound.models import BaseCompound
@@ -226,6 +228,16 @@ class SubstanceSerializer(CommonInfoSerializer):
                 f"The identifier/s {[e for e in errors]} is not unique in restrictive name fields."
             )
         return data
+
+
+class SearchResolutionSerializer(serializers.Serializer):
+    """Serializer to return Substances and Compounds"""
+
+    compounds = CompoundSerializer(many=True)
+    substances = SubstanceSerializer(many=True)
+
+    class Meta:
+        fields = "__all__"
 
 
 class RelationshipTypeSerializer(ControlledVocabSerializer):
