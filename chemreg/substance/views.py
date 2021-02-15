@@ -1,11 +1,9 @@
-from collections import namedtuple
+from itertools import chain
 
-from rest_framework import viewsets
 from rest_framework.response import Response
 
 from chemreg.common.mixins import DeprecateDeleteMixin
-from chemreg.compound.models import DefinedCompound
-from chemreg.compound.serializers import DefinedCompoundSerializer
+from chemreg.compound.models import BaseCompound
 from chemreg.jsonapi.views import ModelViewSet
 from chemreg.substance.filters import SubstanceFilter, SubstanceRelationshipFilter
 from chemreg.substance.models import (
@@ -22,6 +20,7 @@ from chemreg.substance.models import (
 from chemreg.substance.serializers import (  # SearchResolutionSerializer,
     QCLevelsTypeSerializer,
     RelationshipTypeSerializer,
+    SearchResolutionSerializer,
     SourceSerializer,
     SubstanceRelationshipSerializer,
     SubstanceSerializer,
@@ -89,28 +88,19 @@ class SubstanceRelationshipViewSet(ModelViewSet):
     filterset_class = SubstanceRelationshipFilter
 
 
-ResolverResponse = namedtuple("ResolverResponse", ("substances", "compounds"))
-
-
-class ResolverViewSet(viewsets.ViewSet):
+class ResolverViewSet(ModelViewSet):
     """
     A simple ViewSet for listing the Tweets and Articles in your Timeline.
     """
 
-    def list(self, request):
-        print("yay")
-        # timeline = ResolverResponse (
-        #     substances=Substance.objects.all(),
-        #     compounds=DefinedCompound.objects.all(),
-        # )
-        # serializer = SearchResolutionSerializer(timeline)
+    serializer_class = SearchResolutionSerializer
 
-        subs = SubstanceSerializer(
-            Substance.objects.all(), context={"request": request}, many=True
-        )
-        comps = DefinedCompoundSerializer(
-            DefinedCompound.objects.all(), context={"request": request}, many=True
-        )
+    def get_queryset(self):
+        return None
 
-        # return Response(serializer.data)
-        return Response({"substances": subs.data, "compounds": comps.data})
+    def list(self, request, *args, **kwargs):
+        big_qs = list(chain(Substance.objects.all(), BaseCompound.objects.all()))
+
+        big = self.get_serializer(big_qs, many=True)
+
+        return Response(big.data)

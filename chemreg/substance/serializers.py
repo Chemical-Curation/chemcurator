@@ -4,13 +4,16 @@ from django.core.exceptions import ValidationError as DjangoValidationError
 from django.core.validators import RegexValidator
 from rest_framework.exceptions import ValidationError
 
-from rest_framework_json_api import serializers
-
 from chemreg.common.serializers import CommonInfoSerializer, ControlledVocabSerializer
 from chemreg.common.validators import validate_casrn_checksum
 from chemreg.compound.models import BaseCompound
-from chemreg.compound.serializers import CompoundSerializer
+from chemreg.compound.serializers import (
+    CompoundSerializer,
+    DefinedCompoundSerializer,
+    IllDefinedCompoundSerializer,
+)
 from chemreg.jsonapi.relations import PolymorphicResourceRelatedField
+from chemreg.jsonapi.serializers import PolymorphicModelSerializer
 from chemreg.substance.models import (
     QCLevelsType,
     RelationshipType,
@@ -230,14 +233,21 @@ class SubstanceSerializer(CommonInfoSerializer):
         return data
 
 
-class SearchResolutionSerializer(serializers.Serializer):
+class SearchResolutionSerializer(PolymorphicModelSerializer):
     """Serializer to return Substances and Compounds"""
 
-    compounds = CompoundSerializer(many=True)
-    substances = SubstanceSerializer(many=True)
+    polymorphic_serializers = [
+        SubstanceSerializer,
+        DefinedCompoundSerializer,
+        IllDefinedCompoundSerializer,
+    ]
+    serializer_kwargs = {
+        DefinedCompoundSerializer: ["override", "is_admin"],
+        IllDefinedCompoundSerializer: ["is_admin"],
+    }
 
     class Meta:
-        fields = "__all__"
+        model = BaseCompound
 
 
 class RelationshipTypeSerializer(ControlledVocabSerializer):
