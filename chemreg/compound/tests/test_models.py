@@ -1,5 +1,6 @@
 from django.db import models
 
+import pytest
 from polymorphic.models import PolymorphicModel
 
 from chemreg.compound.fields import StructureAliasField
@@ -27,6 +28,15 @@ def test_basecompound():
     assert isinstance(structure, models.TextField)
 
 
+@pytest.mark.django_db
+def test_definedcompound_validation(substance_factory, defined_compound_factory):
+    sub = substance_factory().instance
+    dc = defined_compound_factory.build()
+    dc.initial_data.update({"id": sub.pk})
+    assert not dc.is_valid()
+    assert dc.errors["id"][0].code == "invalid"
+
+
 def test_definedcompound():
     assert issubclass(DefinedCompound, BaseCompound)
     # molfile_v3000
@@ -48,6 +58,15 @@ def test_illdefinedcompound():
     query_structure_type = IllDefinedCompound._meta.get_field("query_structure_type")
     assert isinstance(query_structure_type, models.ForeignKey)
     assert query_structure_type.default == get_illdefined_qst
+
+
+@pytest.mark.django_db
+def test_illdefinedcompound_validation(substance_factory, ill_defined_compound_factory):
+    sub = substance_factory().instance
+    idc = ill_defined_compound_factory.build()
+    idc.initial_data.update({"id": sub.pk})
+    assert not idc.is_valid()
+    assert idc.errors["id"][0].code == "invalid"
 
 
 def test_querystructuretype():

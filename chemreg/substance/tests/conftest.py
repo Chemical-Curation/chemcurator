@@ -1,5 +1,6 @@
 from pytest_factoryboy import register
 
+from chemreg.compound.tests.factories import DefinedCompoundFactory
 from chemreg.substance.tests.factories import (
     QCLevelsTypeFactory,
     RelationshipTypeFactory,
@@ -12,6 +13,7 @@ from chemreg.substance.tests.factories import (
     SynonymTypeFactory,
 )
 
+register(DefinedCompoundFactory)
 register(QCLevelsTypeFactory)
 register(RelationshipTypeFactory)
 register(SourceFactory)

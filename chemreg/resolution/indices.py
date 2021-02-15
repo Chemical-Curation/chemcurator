@@ -82,6 +82,16 @@ class Index:
     def get_model_document(self, instance):
         raise NotImplementedError("`get_model_document()` must be implemented.")
 
+    def delete(self, pk):
+        # delete a single row
+        try:
+            resp = requests.delete(self.delete_url + pk, headers=self.HEADERS)
+            return resp.json()
+        except requests.exceptions.ConnectionError:
+            raise APIException("The Resolver service is not available right now")
+        except Exception as e:
+            raise APIException(detail=str(e))
+
 
 class SubstanceIndex(Index):
     search_url = f"{RESOLUTION_URL}/api/v1/resolver"
@@ -125,6 +135,35 @@ class SubstanceIndex(Index):
                             }
                             for synonym in instance.synonym_set.all()
                         ],
+                    },
+                },
+            }
+        }
+
+
+class CompoundIndex(Index):
+    search_url = f"{RESOLUTION_URL}/api/v1/resolver"
+    index_url = f"{RESOLUTION_URL}/api/v1/substances/_index"
+    delete_url = f"{RESOLUTION_URL}/api/v1/substances/"
+    delete_pk = "pk"
+
+    def get_model_document(self, instance):
+        return {
+            "data": {
+                "id": instance.pk,
+                "type": "substance",  # todo: index name
+                "attributes": {
+                    "identifiers": {
+                        "compound_id": instance.pk,
+                        "inchikey": instance.inchikey
+                        if isinstance(
+                            instance, apps.get_model("compound.DefinedCompound"),
+                        )
+                        else None,
+                        "preferred_name": None,
+                        "display_name": None,
+                        "casrn": None,
+                        "synonyms": [],
                     },
                 },
             }

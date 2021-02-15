@@ -6,7 +6,7 @@ from polymorphic.models import PolymorphicManager, PolymorphicModel
 from polymorphic.query import PolymorphicQuerySet
 
 from chemreg.common.models import CommonInfo, ControlledVocabulary
-from chemreg.common.validators import validate_deprecated
+from chemreg.common.validators import UniqueAcrossModelsValidator, validate_deprecated
 from chemreg.compound.fields import StructureAliasField
 from chemreg.compound.utils import build_cid
 from chemreg.compound.validators import (
@@ -61,7 +61,11 @@ class BaseCompound(PolymorphicModel, CommonInfo):
     """
 
     id = models.CharField(
-        default=build_cid, primary_key=True, max_length=50, unique=True
+        default=build_cid,
+        primary_key=True,
+        max_length=50,
+        unique=True,
+        validators=[UniqueAcrossModelsValidator(model_list=["substance.Substance"])],
     )
     structure = models.TextField()
     # soft delete functionality
