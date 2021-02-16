@@ -1270,6 +1270,19 @@
     source: Source-Two
     synonym_quality: talk-society-hand-4
     synonym_type: area-professor-home
+- model: substance.synonym
+  pk: 11
+  fields:
+    created_at: 2020-08-14 17:20:11.247212
+    created_by: 1
+    updated_at: 2020-08-14 17:20:11.247249
+    updated_by: 1
+    identifier: plow
+    qc_notes: somebody QC me!
+    substance: DTXSID502000000
+    source: Source-Two
+    synonym_quality: talk-society-hand-4
+    synonym_type: area-professor-home
 - model: substance.relationshiptype
   pk: monomer
   fields:
