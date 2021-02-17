@@ -4,6 +4,7 @@ from django.db.models import Q
 
 from chemreg.common.models import CommonInfo, ControlledVocabulary
 from chemreg.common.validators import (
+    UniqueAcrossModelsValidator,
     validate_casrn_checksum,
     validate_deprecated,
     validate_is_regex,
@@ -75,7 +76,11 @@ class Substance(CommonInfo):
     casrn_regex = r"^[0-9]{2,7}-[0-9]{2}-[0-9]$"
 
     id = models.CharField(
-        default=build_sid, primary_key=True, max_length=50, unique=True
+        default=build_sid,
+        primary_key=True,
+        max_length=50,
+        unique=True,
+        validators=[UniqueAcrossModelsValidator(model_list=["compound.BaseCompound"])],
     )
     preferred_name = models.CharField(
         max_length=255,
@@ -139,6 +144,11 @@ class Substance(CommonInfo):
             validate_casrn_checksum,
         ],
     )
+
+    def __init__(self, *args, **kwargs):
+        super(Substance, self).__init__(*args, **kwargs)
+        # this is needed to determine whether a compound is becoming "orphaned"
+        self.original_compound = self.associated_compound
 
     objects = SubstanceQuerySet.as_manager()
 

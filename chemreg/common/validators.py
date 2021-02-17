@@ -1,5 +1,8 @@
 import re
 
+from django.apps import apps
+from django.utils.deconstruct import deconstructible
+from django.utils.translation import gettext_lazy as _
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import UniqueTogetherValidator
 from rest_framework.validators import qs_exists
@@ -66,6 +69,37 @@ def validate_is_regex(value):
         re.compile(value)
     except re.error:
         raise ValidationError("The provided RegExp is invalid")
+
+
+@deconstructible
+class UniqueAcrossModelsValidator:
+    model_list = []
+    message = _("Value is not unique.")
+    code = "invalid"
+
+    def __init__(self, model_list=None, message=None, code=None):
+        if model_list is not None:
+            self.model_list = model_list
+        if message is not None:
+            self.message = message
+        if code is not None:
+            self.code = code
+
+    def __call__(self, value):
+        """
+        Validate that the input is not contained within any other model/key pair
+        """
+        for model in self.model_list:
+            if apps.get_model(model).objects.filter(pk=value).exists():
+                raise ValidationError(self.message, code=self.code)
+
+    def __eq__(self, other):
+        return (
+            isinstance(other, UniqueAcrossModelsValidator)
+            and self.model_list == other.model_list
+            and (self.message == other.message)
+            and (self.code == other.code)
+        )
 
 
 class ExternalIdUniqueTogetherValidator(UniqueTogetherValidator):

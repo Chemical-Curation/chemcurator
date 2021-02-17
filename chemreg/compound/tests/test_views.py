@@ -253,6 +253,27 @@ def test_defined_compound_has_common_info(
 
 
 @pytest.mark.django_db
+def test_defined_compound_bad_valence(
+    admin_user, client, defined_compound_factory, user
+):
+    client.force_authenticate(user=admin_user)
+    dc = defined_compound_factory.build(
+        # Molfile is for "FIBr"
+        molfile_v3000="\n  -INDIGO-01192114142D\n\n  0  0  0  0  0  0  0  0  0  0  0 V3000\nM  V30 BEGIN CTAB\nM  V30 COUNTS 3 2 0 0 0\nM  V30 BEGIN ATOM\nM  V30 1 F 9.425 -3.15 0.0 0\nM  V30 2 I 10.425 -3.15 0.0 0\nM  V30 3 Br 11.425 -3.15 0.0 0\nM  V30 END ATOM\nM  V30 BEGIN BOND\nM  V30 1 1 1 2\nM  V30 2 1 2 3\nM  V30 END BOND\nM  V30 END CTAB\nM  END\n"
+    )
+
+    response = client.post(
+        "/definedCompounds",
+        {"data": {"type": "definedCompound", "attributes": dc.initial_data}},
+    )
+    assert response.status_code == 201
+    full_response_data = json.loads(response.content)["data"]
+    url = reverse("basecompound-detail", [full_response_data.get("id")])
+    # Assert no errors returned (assert fails if error returns)
+    assert client.get(url).json()["data"]["attributes"]
+
+
+@pytest.mark.django_db
 def test_compound_retrieves_defined_compound_details(
     admin_user, client, defined_compound_factory, user
 ):

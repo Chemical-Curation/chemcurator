@@ -18,6 +18,7 @@ from chemreg.compound.validators import (
     validate_molfile_v3000_computable,
     validate_smiles,
 )
+from chemreg.indigo.errors import catch_compound_calc_error
 from chemreg.indigo.inchi import get_inchikey
 from chemreg.indigo.molfile import get_molfile_v3000
 from chemreg.jsonapi.serializers import PolymorphicModelSerializer
@@ -167,15 +168,19 @@ class DefinedCompoundDetailSerializer(DefinedCompoundSerializer):
             "calculated_inchikey",
         ]
 
+    @catch_compound_calc_error
     def get_molecular_weight(self, obj):
         return obj.indigo_structure.molecularWeight()
 
+    @catch_compound_calc_error
     def get_molecular_formula(self, obj):
         return obj.indigo_structure.grossFormula()
 
+    @catch_compound_calc_error
     def get_smiles(self, obj):
         return obj.indigo_structure.smiles()
 
+    @catch_compound_calc_error
     def get_calculated_inchikey(self, obj):
         return get_inchikey(obj.molfile_v3000)
 

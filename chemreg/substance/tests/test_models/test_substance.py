@@ -130,3 +130,12 @@ def test_validate_casrn(substance_factory, casrn, validity, code):
     assert substance.is_valid() == validity
     if substance.errors:
         assert substance.errors["casrn"][0].code == code
+
+
+@pytest.mark.django_db
+def test_substance_sid_unique_validation(substance_factory, defined_compound_factory):
+    dc = defined_compound_factory().instance
+    sub = substance_factory.build()
+    sub.initial_data.update({"id": dc.pk})
+    assert not sub.is_valid()
+    assert sub.errors["id"][0].code == "invalid"
