@@ -35,6 +35,7 @@ if env.bool("WHITELIST_LOCAL"):
         "0.0.0.0",
         "127.0.0.1",
         "localhost",
+        "testserver",
     ]
 if env("WHITELIST_HOST"):
     ALLOWED_HOSTS += [env("WHITELIST_HOST")]

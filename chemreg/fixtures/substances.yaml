@@ -1270,6 +1270,20 @@
     source: Source-Two
     synonym_quality: talk-society-hand-4
     synonym_type: area-professor-home
+- model: substance.synonym
+  pk: 11
+  fields:
+    created_at: 2021-02-17 21:27:04.383849
+    created_by: 1
+    updated_at: 2021-02-17 21:27:04.383969
+    updated_by: 1
+    identifier: PXGOKWXKJXAPGV-UHFFFAOYSA-N
+    qc_notes: this synonym is for the test at the resolver endpoint to show that we
+      can get back both Substances and Compounds
+    substance: DTXSID202000099
+    source: down-indeed-other-4
+    synonym_quality: area-professor-fromage
+    synonym_type: capital-performance-4
 - model: substance.relationshiptype
   pk: monomer
   fields:
